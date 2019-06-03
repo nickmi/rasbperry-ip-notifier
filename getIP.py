@@ -17,7 +17,7 @@ def getIP():
     except:
         print("Failed to get address")
 
-def publishIP():
+def publishIP(ip):
     topic = "{TOPIC}"
     publish.single(topic, ip, qos=0, retain=False, hostname="broker.mqttdashboard.com",
     port=1883, client_id="", keepalive=60, will=None, auth=None, tls=None,transport="tcp")
