@@ -1,0 +1,13 @@
+[Unit]
+Description=get ip
+After=multi-user.target
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/BroadcastIP/getIP.py
+restart=Always
+
+[Install]
+WantedBy=multi-user.target
